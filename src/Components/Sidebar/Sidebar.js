@@ -8,9 +8,9 @@ function Sidebar(props) {
   return (
       <div className="sidebarContainer">
 
-<Task icon={faEllipsisV} text="all tasks" />
+<Task api={props.api} icon={faEllipsisV} text="all tasks" />
             {props.tasks.map((task, i) => {
-              return( <Task colors={props.colorsId} key={i} color={task.color} text={task.title} />);
+              return( <Task api={props.api} colors={props.colorsId} key={i} color={task.color} text={task.title} />);
             }) }
             <Button text="Hello" />
       </div>
