@@ -1,0 +1,13 @@
+.sideBarButton{
+    margin-left: 4%;
+    background-color: transparent;
+    border: 2px solid #bdc3c7;
+    color: #bdc3c7;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn:hover{
+    border: 2px solid #95a5a6;
+    color: #95a5a6;
+}
