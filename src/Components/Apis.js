@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 const apis = {
-  readTask: id => api.get("tasks/" + id),
+  loadTask: id => api.get("tasks/" + id),
   loadTasks: () => api.get("tasks"),
   removeTask: id => api.delete("tasks/" + id),
   createTask: task => api.post("tasks", task),

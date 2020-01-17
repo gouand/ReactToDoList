@@ -1,28 +1,23 @@
 import React from 'react';
+import {
+    useParams
+  } from "react-router-dom";
 // import logo from './logo.svg';
 import List from './List/List';
+import { useGetLists } from '../../Hooks/useGetLists';
 import './Content.css';
+import { useGetTask } from '../../Hooks/useGetTask';
 
-let data = [{
-    id: 1,
-    cheked: false,
-    text: "Hi"
-},
-{
-    id: 1,
-    cheked: true,
-    text: "Hielo"
-}
-,{
-    id: 1,
-    cheked: false,
-    text: "Hi"
-}]
 
-function Content() {
+
+
+function Content(props) {
+    let {id} = useParams();
+    const {lists} = useGetLists(props, id);
+    const {task} = useGetTask(props,id);
   return (
     <div className="contentContainer">
-        <List title="HELLO" lists={data} />
+        <List api={props.api} title={task.title} lists={lists} />
     </div>
   );
 }

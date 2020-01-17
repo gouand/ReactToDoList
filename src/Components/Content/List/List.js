@@ -5,9 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './List.css';
 
 function List(props) {
+    
   return (
       <div className="list">
-         <h2 className="list__taskTitle">{props.title}</h2>
+         <h2 className="list__taskTitle" style={{textTransform: "uppercase"}}>{props.title}</h2>
             {props.lists.map((list,i) => (
                 <div className="list__item" key={i}>{!list.cheked ?<FontAwesomeIcon icon={faMinusSquare} /> : <FontAwesomeIcon icon={faCheckSquare} />}<li>{list.text}</li></div>
          ))}

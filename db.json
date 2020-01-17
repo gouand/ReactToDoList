@@ -10,10 +10,10 @@
         {"id" : 3, "color" : "green"}
     ],
     "lists": [
-        {"id": 1, "text" : "Hello my friend", "task_id" : 1},
-        {"id": 2, "text" : "Hello", "task_id" : 1},
-        {"id": 3, "text" : "Hello Alice", "task_id" : 1},
-        {"id": 3, "text" : "Hello Alice", "task_id" : 2},
-        {"id": 3, "text" : "Hello Alice", "task_id" : 3}
+        {"id": 1, "text" : "Hello my friend", "task_id" : 1, "cheked": true},
+        {"id": 2, "text" : "Hello", "task_id" : 1, "cheked": false},
+        {"id": 3, "text" : "Hello Alice", "task_id" : 1, "cheked": false},
+        {"id": 4, "text" : "Hello Alice", "task_id" : 2, "cheked": true},
+        {"id": 5, "text" : "Hello Alice", "task_id" : 3, "cheked": true}
     ]
 }

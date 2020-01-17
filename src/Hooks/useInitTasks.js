@@ -8,17 +8,12 @@ export const useInitTasks = (props, id = null) => {
   
     useEffect(() => {
       props.api.loadTasks().then(resp => {
-            const data = [...resp.data, {
-              color: props.api.loadColor(resp.data[1].color_id).then(res => {
-                return res.data;
-              })
-            }]
             setTask(resp.data);
           });
-          props.api.loadColor(id).then(resp => {
+      props.api.loadColor(id).then(resp => {
             setColor(resp.data);
           })
-    }, []);
+    }, [props.api, id]);
   
   
     return {tasks,colors};
