@@ -9,13 +9,11 @@ import {
 } from "react-router-dom";
 import {useInitTasks } from '../../Hooks/useInitTasks';
 import './App.css';
-import { useGetAllTasks } from '../../Hooks/useGetAllTasks';
 
 
 
 const App = (props) => {
   const {tasks, colors} = useInitTasks(props);
-  const {data} = useGetAllTasks(props);
   //setTask(newData);
   return (
     <Router>
@@ -25,9 +23,11 @@ const App = (props) => {
         </div>
         <div className="toDoContainer__content col-9">
         <Switch>
-        {console.log(data)}
-        <Route exact path="/">
-              <Content api={props.api} />
+          <Route exact path="/">
+              <Content allTasks={true} api={props.api} />
+          </Route>
+          <Route exact path="/tasks">
+              <Content allTasks={true} api={props.api} />
           </Route>
           <Switch>
           <Route path="/tasks/:id">

@@ -11,13 +11,14 @@ import { useGetTask } from '../../Hooks/useGetTask';
 
 
 
+
 function Content(props) {
     let {id} = useParams();
     const {lists} = useGetLists(props, id);
     const {task} = useGetTask(props,id);
   return (
     <div className="contentContainer">
-        <List api={props.api} title={task.title} lists={lists} />
+            <List allTasks={props.allTasks} api={props.api} title={task.title} lists={lists} />
     </div>
   );
 }
