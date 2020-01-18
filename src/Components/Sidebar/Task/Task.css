@@ -1,4 +1,4 @@
-.color{
+.color {
     margin-bottom: 2px;
     min-height: 15px!important;
     min-width: 15px!important;
@@ -10,32 +10,33 @@
     margin-left: 10px;
 }
 
-.red{
+.red {
     background-color: #e74c3c;
 }
 
-.blue{
+.blue {
     background-color: #3498db;
 }
 
-.green{
+.green {
     background-color: #2ecc71;
 }
 
-.task{
+.task {
     padding-top: 20px;
     padding-left: 15%;
     justify-content: start;
     align-items: center;
     text-align: start;
 }
-.task__button{
+
+.task__button {
     display: flex;
     color: #34495e;
     margin-left: 10px;
 }
 
-.task__button:hover{
+.task__button:hover {
     text-decoration: none;
     color: #2c3e50;
 }

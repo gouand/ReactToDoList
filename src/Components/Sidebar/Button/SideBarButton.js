@@ -5,10 +5,10 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 
 function SideBarButton(props) {
   return (
-      <button className="btn sideBarButton">
-          {props.text.toUpperCase()} 
-          <FontAwesomeIcon icon={faPlusCircle} />
-      </button>
+    <button className="btn sideBarButton">
+      {props.text.toUpperCase()}
+      <FontAwesomeIcon icon={faPlusCircle} />
+    </button>
   );
 }
 

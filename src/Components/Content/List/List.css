@@ -1,17 +1,17 @@
-li{
+li {
     list-style: none;
     margin-left: 1%;
 }
 
-.task__item{
+.task__item {
     margin-top: 50px;
 }
 
-.task__item:first-child{
+.task__item:first-child {
     margin-top: 5px!important;
 }
 
-.list__item{
+.list__item {
     display: flex;
     align-items: center;
     margin-left: 5%;
