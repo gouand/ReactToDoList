@@ -14,24 +14,24 @@ function List(props) {
         return (
             <div>
                 <h2 className="list__taskTitle" style={{ textTransform: "uppercase" }}>{props.title}</h2>
-                {props.lists.map((list, i) => (
-                    <div className="list__item" key={i}>{!list.cheked ? <FontAwesomeIcon icon={faMinusSquare} /> : <FontAwesomeIcon icon={faCheckSquare} />}<li>{list.text}</li></div>
-                ))
+                {props.lists !== undefined ? props.lists.map((list, i) => (
+                    <div className="list__item" key={list.id}>{!list.cheked ? <FontAwesomeIcon icon={faMinusSquare} /> : <FontAwesomeIcon icon={faCheckSquare} />}<li>{list.text}</li></div>
+                )) : ''
                 }
                 <SideBarButton text="Add list" />
             </div>
         )
     }
     const showLists = (task) => {
-        return task.lists.map((list) => (
+        return task.lists !== undefined ? task.lists.map((list) => (
             <div className="list__item" key={list.id}>{!list.cheked ? <FontAwesomeIcon icon={faMinusSquare} /> : <FontAwesomeIcon icon={faCheckSquare} />}<li>{list.text}</li></div>
-        ))
+        )) : ''
     }
     const showAllTasks = () => data.map((task) =>
-        <div className="task__item">
-            <h2 key={task.id} className="list__taskTitle" style={{ textTransform: "uppercase" }}>{task.title}</h2>
+        <div key={task.id} className="task__item">
+            <h2 className="list__taskTitle" style={{ textTransform: "uppercase" }}>{task.title}</h2>
             {showLists(task)}
-            <SideBarButton text="Add list" />
+            <SideBarButton key={task.id} text="Add list" />
         </div>
     )
 
@@ -39,7 +39,7 @@ function List(props) {
     return (
         <div className="list">
             {props.allTasks ?
-                showAllTasks() : (showTask())
+                showAllTasks() : showTask()
             }
         </div>
     );

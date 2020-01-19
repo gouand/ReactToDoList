@@ -1,0 +1,76 @@
+.taskAddForm{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 20px;
+}
+
+
+.btnContainer__button{
+    background-color: transparent;
+    border: 2px solid #bdc3c7;
+    color: #bdc3c7;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 15px;
+    margin-left: 15%;
+    border-radius: 5px;
+    padding: 5px;
+    height: 40px;
+    font-size: 13px;
+    align-items: flex-end;
+}
+
+.taskAddForm__input{
+    background-color: transparent;
+    border: 2px solid #bdc3c7;
+    color: #bdc3c7;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.taskAddForm__close{
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    min-height: 15px;
+    min-width: 20px;
+    background: #ffff;
+    border-radius: 50%;
+    top:-10px;
+    right: -5px;
+    text-align: center;
+    color: #bdc3c7;
+}
+
+.inputColor{
+    margin-top: 15px;
+    max-height: 30px!important;
+    max-width: 30px!important;
+    min-width: 30px!important;
+    min-height: 30px!important;
+}
+input{
+    border: 0px;
+    color: transparent;
+    text-shadow: 0 0 0 #2196f3;
+    outline:none;
+    content: '';
+}
+
+input:focus{
+    border: 2px solid #bdc3c7;
+}
+.inputColor:hover{
+    border: 2px solid #bdc3c7;
+    cursor: pointer;
+}
+
+.inputColor:active{
+    border: 2px solid #bdc3c7;
+}
+

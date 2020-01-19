@@ -13,7 +13,8 @@ export const apis = {
   editeTask: task => api.put("tasks/" + task.id, task),
   createList: list => api.post("lists", list),
   loadLists: task => api.get("lists?taskId=" + task),
-  loadColor: (color) => api.get("colors?id=" + color)
+  loadColor: (color) => api.get("colors?id=" + color),
+  loadColors: () => api.get('colors')
 };
 
 export default apis;
